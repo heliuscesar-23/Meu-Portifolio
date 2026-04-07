@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hélius César | Portfólio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- CONTEÚDO SIMPLIFICADO (mantive foco no contato funcionando) -->
+
+<section class="min-h-screen flex items-center justify-center p-6">
+<div class="max-w-xl w-full">
+
+<h1 class="text-4xl font-bold mb-6 text-center">
+Hélius César
+</h1>
+
+<p class="text-center mb-10 text-gray-400">
+Entre em contato comigo
+</p>
+
+<!-- FORMULÁRIO FUNCIONANDO -->
+<form id="contactForm" action="https://formsubmit.co/heliuscesarmoncao@gmail.com" method="POST" class="space-y-6">
+
+<input type="hidden" name="_captcha" value="false">
+
+<div>
+<label class="block mb-2">Nome</label>
+<input type="text" name="name" required class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+</div>
+
+<div>
+<label class="block mb-2">E-mail</label>
+<input type="email" name="email" required class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+</div>
+
+<div>
+<label class="block mb-2">Assunto</label>
+<input type="text" name="subject" required class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+</div>
+
+<div>
+<label class="block mb-2">Mensagem</label>
+<textarea name="message" rows="4" required class="w-full p-3 rounded bg-gray-900 border border-gray-700"></textarea>
+</div>
+
+<button id="submitBtn" type="submit" class="w-full py-3 bg-blue-600 rounded flex justify-center items-center gap-2">
+<span id="btnText">Enviar Mensagem</span>
+<span id="btnLoader" class="hidden animate-spin">
+<i class="fas fa-spinner"></i>
+</span>
+</button>
+
+<p id="successMessage" class="hidden text-green-400 text-center">
+Mensagem enviada com sucesso!
+</p>
+
+</form>
+
+</div>
+</section>
+
+<!-- SCRIPT CORRETO -->
+<script>
+
+// Menu (caso use depois)
+function toggleMobileMenu(){}
+
+// Formulário com feedback
+const form = document.getElementById('contactForm');
+const btn = document.getElementById('submitBtn');
+const btnText = document.getElementById('btnText');
+const btnLoader = document.getElementById('btnLoader');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function () {
+    btnText.textContent = 'Enviando...';
+    btnLoader.classList.remove('hidden');
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btnText.textContent = 'Mensagem Enviada!';
+        btnLoader.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+        form.reset();
+    }, 1500);
+});
+
+</script>
+
+</body>
+</html>
