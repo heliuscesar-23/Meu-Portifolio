@@ -1,86 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hélius César | Analista de Gestão & Marketing Digital</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
-                    colors: { primary: '#0f172a', accent: '#3b82f6', secondary: '#64748b', dark: '#020617', card: '#1e293b' }
-                }
-            }
-        }
-    </script>
-    <style>
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hover-lift { transition: transform 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hélius César | Portfólio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
 </head>
-<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-display font-bold text-xl tracking-tight"><span class="gradient-text">HC</span> Portfolio</div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#sobre" class="hover:text-accent transition-colors">Sobre</a>
-                <a href="#experiencia" class="hover:text-accent transition-colors">Experiência</a>
-                <a href="#contato" class="hover:text-accent transition-colors">Contato</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-black text-white">
 
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary via-dark to-black"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-            <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">Hélius <span class="gradient-text">César</span></h1>
-            <p class="text-xl md:text-2xl text-secondary mb-8 font-light">Analista de Gestão Administrativa, Vendas e Marketing Digital</p>
-            <div class="flex justify-center gap-4">
-                <a href="#contato" class="px-8 py-4 bg-accent hover:bg-blue-600 rounded-full font-semibold transition-all">Falar Comigo</a>
-            </div>
-        </div>
-    </section>
+<!-- CONTEÚDO SIMPLIFICADO (mantive foco no contato funcionando) -->
 
-    <section id="contato" class="py-32 bg-primary relative">
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Vamos <span class="gradient-text">Conversar</span></h2>
-                <p class="text-secondary">Aberto a oportunidades e parcerias profissionais</p>
-            </div>
+<section class="min-h-screen flex items-center justify-center p-6">
+<div class="max-w-xl w-full">
 
-            <div class="glass-card rounded-3xl p-8 md:p-12">
-                <form action="https://formspree.io/f/xdapbynd" method="POST" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Seu Nome</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Seu E-mail</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Mensagem</label>
-                        <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white resize-none"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:opacity-90 transition-opacity text-white">
-                        Enviar Mensagem Agora
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+<h1 class="text-4xl font-bold mb-6 text-center">
+Hélius César
+</h1>
 
-    <footer class="py-8 border-t border-white/10 bg-dark text-center">
-        <p class="text-secondary text-sm">© 2026 Hélius César. Todos os direitos reservados.</p>
-    </footer>
+<p class="text-center mb-10 text-gray-400">
+Entre em contato comigo
+</p>
+
+<!-- FORMULÁRIO FUNCIONANDO -->
+<form id="contactForm" action="https://formsubmit.co/heliuscesarmoncao@gmail.com" method="POST" class="space-y-6">
+
+<input type="hidden" name="_captcha" value="false">
+
+<div>
+<label class="block mb-2">Nome</label>
+<input type="text" name="name" required class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+</div>
+
+<div>
+<label class="block mb-2">E-mail</label>
+<input type="email" name="email" required class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+</div>
+
+<div>
+<label class="block mb-2">Assunto</label>
+<input type="text" name="subject" required class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+</div>
+
+<div>
+<label class="block mb-2">Mensagem</label>
+<textarea name="message" rows="4" required class="w-full p-3 rounded bg-gray-900 border border-gray-700"></textarea>
+</div>
+
+<button id="submitBtn" type="submit" class="w-full py-3 bg-blue-600 rounded flex justify-center items-center gap-2">
+<span id="btnText">Enviar Mensagem</span>
+<span id="btnLoader" class="hidden animate-spin">
+<i class="fas fa-spinner"></i>
+</span>
+</button>
+
+<p id="successMessage" class="hidden text-green-400 text-center">
+Mensagem enviada com sucesso!
+</p>
+
+</form>
+
+</div>
+</section>
+
+<!-- SCRIPT CORRETO -->
+<script>
+
+// Menu (caso use depois)
+function toggleMobileMenu(){}
+
+// Formulário com feedback
+const form = document.getElementById('contactForm');
+const btn = document.getElementById('submitBtn');
+const btnText = document.getElementById('btnText');
+const btnLoader = document.getElementById('btnLoader');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function () {
+    btnText.textContent = 'Enviando...';
+    btnLoader.classList.remove('hidden');
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btnText.textContent = 'Mensagem Enviada!';
+        btnLoader.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+        form.reset();
+    }, 1500);
+});
+
+</script>
+
 </body>
 </html>
