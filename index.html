@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hélius César | Analista de Gestão & Marketing Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a',
+                        accent: '#3b82f6',
+                        secondary: '#64748b',
+                        dark: '#020617',
+                        card: '#1e293b',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-dark to-black"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <div class="animate-slide-up">
+                <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">Hélius <span class="gradient-text">César</span></h1>
+                <p class="text-xl text-secondary mb-8">Analista de Gestão & Marketing Digital</p>
+                <a href="#contato" class="px-8 py-4 bg-accent hover:bg-blue-600 rounded-full font-semibold transition-all">Falar Comigo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-32 bg-primary">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl font-bold mb-4">Mande uma <span class="gradient-text">Mensagem</span></h2>
+                <p class="text-secondary">Eu receberei diretamente no meu e-mail pessoal.</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-8 md:p-12 reveal">
+                <form action="https://formspree.io/f/xdapbynd" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Seu Nome</label>
+                            <input type="text" name="nome" required class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white" placeholder="Ex: João Silva">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Seu E-mail</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white" placeholder="seu@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Assunto</label>
+                        <input type="text" name="_subject" class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white" placeholder="Ex: Proposta de Trabalho">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Mensagem</label>
+                        <textarea name="mensagem" rows="4" required class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-accent focus:outline-none text-white resize-none" placeholder="Escreva aqui..."></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://seuusuarionogithub.github.io/seu-repositorio/"> 
+
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:scale-[1.02] transition-transform">
+                        Enviar para Hélius César
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
